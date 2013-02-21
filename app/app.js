@@ -10,18 +10,19 @@ var express = require('express')
   , path = require('path');
 
 var app = express();
+var rootDir = __dirname.substring(0, __dirname.lastIndexOf("/"));
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
-  app.set('views', __dirname + '/views');
+  app.set('views', rootDir + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(app.router);
-  app.use(require('stylus').middleware(__dirname + '/public'));
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(require('stylus').middleware(rootDir + '/public'));
+  app.use(express.static(path.join(rootDir, 'public')));
 });
 
 app.configure('development', function(){
