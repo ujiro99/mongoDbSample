@@ -1,0 +1,24 @@
+%h1= "No.1 Welcome #{ @name }"
+ 
+:javascript
+  $(function(){
+    //btn#onclick
+    $("#btn").click(function(){
+        alert("hello");
+        return false;
+    });
+  });
+ 
+ 
+%h2= "No.2 use coffee function"
+ 
+- msg = (x,y)->
+  %h3= x
+  %h3= y
+ 
+= msg "Hello","haml"
+= msg "hi","coffee-script"
+ 
+ 
+%h2= "No.3 use javascript"
+%input#btn{ type: 'button', value: 'push'}
