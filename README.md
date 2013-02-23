@@ -1,7 +1,13 @@
 mongoDbSample
 =============
 
-Sample program using node.js, express, mongoDb, Herok
+Sample program using
+* node.js
+* express
+* coffeescript
+* haml-coffee
+* mongoDb
+* Heroku
 
 ## Heroku
 <http://mongo-db-sample.herokuapp.com/>
