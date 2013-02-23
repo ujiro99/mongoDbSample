@@ -5,7 +5,7 @@ MONGO_URL = process.env.MONGOHQ_URL;
 
 mongoose = require("mongoose");
 
-db = mongoose.connect("MONGO_URL");
+db = mongoose.connect(MONGO_URL);
 
 validator = function(v) {
   return v.length > 0;
