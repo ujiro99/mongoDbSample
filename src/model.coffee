@@ -1,5 +1,7 @@
+MONGO_URL = process.env.MONGOHQ_URL
+
 mongoose = require "mongoose"
-db = mongoose.connect "mongodb://localhost/mongoDbSample"
+db = mongoose.connect "MONGO_URL"
 
 validator = (v) ->
   return v.length > 0
