@@ -1,16 +1,20 @@
 {
-  "name": "application-name",
+  "name": "mongoDbSample",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app"
+    "start": "node server.js"
   },
   "dependencies": {
     "express": "3.1.0",
-    "haml-coffee": "*",
-    "stylus": "*",
-    "express-partials": "*",
-    "mongoose": "*",
-    "consolidate": "*"
+    "haml-coffee": "0.8.0",
+    "stylus": "0.32.0",
+    "express-partials": "0.0.6",
+    "mongoose": "3.5.6",
+    "consolidate": "0.8.0"
+  },
+  "engines" : {
+    "node" : "0.8.x"
+    "npm" : "1.1.20"
   }
 }
