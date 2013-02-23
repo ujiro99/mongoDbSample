@@ -1,0 +1,8 @@
+%h1= "#{ @title }"
+ 
+%p
+  %a{href: "/form"} New Entry
+
+%ul
+  - @items.forEach (item) ->
+    %li= item.text
