@@ -1,4 +1,6 @@
-MONGO_URL = process.env.MONGOHQ_URL
+MONGO_URL = process.env.MONGOHQ_URL or
+            process.env.MONGOLAB_URL or
+            "mongodb://localhost/mydb"
 
 mongoose = require "mongoose"
 db = mongoose.connect MONGO_URL
